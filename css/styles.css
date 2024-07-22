@@ -1,0 +1,247 @@
+@font-face {
+    font-family: 'Outfit';
+    src: url(../assets/fonts/outfit/static/Outfit-Regular.ttf);
+    font-weight: 400;
+    /* normal weight */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url(../assets/fonts/outfit/static/Outfit-Bold.ttf);
+    font-weight: 700;
+    /* bold weight */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url(../assets/fonts/outfit/static/Outfit-ExtraBold.ttf);
+    font-weight: 800;
+    /* extra bold weight */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Young-Serif';
+    src: url(../assets/fonts/young-serif/YoungSerif-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: hsl(32, 54%, 90%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-family: 'Outfit', sans-serif;
+}
+
+.container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    width: 100%;
+    max-width: 700px;
+    /* Max width for larger screens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Add some shadow for better distinction */
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: hsl(30, 10%, 34%);
+    font-size: 30px;
+    text-align: left;
+}
+
+h2 {
+    color: hsl(14, 45%, 36%);
+    font-size: 18px;
+}
+
+h1,
+h2 {
+    font-family: 'Young-Serif', sans-serif;
+    font-weight: normal;
+}
+
+h3 {
+    color: hsl(332, 51%, 32%);
+    font-size: 15px;
+    padding-top: 10px;
+}
+
+p,
+ul {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+ul,
+ol {
+    padding-left: 20px;
+}
+
+ol {
+    list-style: none;
+    counter-reset: my-counter;
+    /* Reset the counter */
+}
+
+ol li {
+    counter-increment: my-counter;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+ol li::before {
+    content: counter(my-counter) ". ";
+    color: hsl(14, 45%, 36%);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.ingredients,
+.preptime,
+.instructions,
+.nutrition {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.preptime {
+    background-color: rgba(123, 40, 79, 0.1);
+    border-radius: 10px;
+    text-align: left;
+    padding-left: 30px;
+    padding-bottom: 5px;
+    margin-left: 10px;
+}
+
+.list {
+    line-height: 1.7;
+}
+
+
+.nutrition table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr {
+    margin-top: 10px;
+}
+
+td,
+th {
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+}
+
+td:last-child {
+    font-weight: bold;
+    color: hsl(14, 45%, 36%);
+}
+
+.image {
+    display: flex;
+    align-self: center;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: inherit;
+}
+
+.attribution {
+    margin-top: 2rem;
+    font-size: 11px;
+    font-style: italic;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 0.3rem;
+}
+
+.attribution a {
+    color: hsl(228, 46%, 44%);
+}
+
+/* Responsive styles */
+@media (max-width: 375px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    p,
+    ul,
+    ol {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .image {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1000px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    p,
+    ul,
+    ol {
+        font-size: 18px;
+    }
+}
