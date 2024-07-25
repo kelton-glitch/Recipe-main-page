@@ -49,10 +49,14 @@ body {
     align-items: center;
     font-weight: 400;
     font-family: 'Outfit', sans-serif;
-    height: 100vh;
 }
 
-.container {
+main {
+   max-width: 1440px;
+   max-height: 100vh;
+}
+
+section{
     display: flex;
     background-color: white;
     border-radius: 10px;
@@ -60,15 +64,12 @@ body {
     margin: 20px;
     width: 100%;
     max-width: 700px;
-    /* Max width for larger screens */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Add some shadow for better distinction */
     flex-direction: column;
 }
 
 h1 {
     color: hsl(30, 10%, 34%);
-    font-size: 30px;
+    font-size: 40px;
     text-align: left;
 }
 
