@@ -49,9 +49,11 @@ body {
     align-items: center;
     font-weight: 400;
     font-family: 'Outfit', sans-serif;
+    height: 100vh;
 }
 
 .container {
+    display: flex;
     background-color: white;
     border-radius: 10px;
     padding: 20px;
@@ -62,7 +64,6 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     /* Add some shadow for better distinction */
     flex-direction: column;
-    align-items: center;
 }
 
 h1 {
@@ -128,6 +129,13 @@ ol li::before {
     border-bottom: 1px solid #ddd;
 }
 
+.ingredients,.preptime, .nutrition{
+    padding-left: 20px;
+}
+
+#instruction{
+    padding-left: 20px;
+}
 .preptime {
     background-color: rgba(123, 40, 79, 0.1);
     border-radius: 10px;
@@ -166,7 +174,6 @@ td:last-child {
     display: flex;
     align-self: center;
     border-radius: 10px;
-    max-width: 600px;
     width: 100%;
     margin-bottom: 20px;
 }
